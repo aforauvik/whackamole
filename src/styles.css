@@ -1,0 +1,54 @@
+.App {
+	text-align: center;
+}
+
+body {
+	font-family: "Anton SC", sans-serif;
+}
+
+.holes {
+	display: grid;
+	grid-template-columns: repeat(3, 100px);
+	grid-gap: 8px;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.hole {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #fafafa;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #fafafa;
+	cursor: pointer;
+	position: relative;
+}
+
+.hole.disabled {
+	pointer-events: none;
+}
+
+.mole {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+}
+
+button {
+	padding: 16px 40px;
+	cursor: pointer;
+	background: #dc5341;
+	border-radius: 8px;
+	border: none;
+
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	color: #ffffff;
+	margin-top: 24px;
+}
