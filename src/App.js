@@ -92,11 +92,9 @@ const App = () => {
 	};
 
 	const handleShare = () => {
+		const message = `I scored ${score} points on ${difficulty} mode in Whack-a-Mole! Play Whack-a-Mole and see if you can score higher than me! Play here - https://whackamole.auvik.me/`;
 		navigator.clipboard.writeText(message);
-		setMessage(
-			`I scored ${score} points on ${difficulty} mode in Whack-a-Mole! Play Whack-a-Mole and see if you can score higher than me! Play here - https://whackamole.auvik.me/`
-		);
-		setTimeout(() => setMessage(""), 8000);
+		setMessage("Score copied to clipboard!");
 	};
 
 	return (
