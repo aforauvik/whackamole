@@ -6,7 +6,7 @@ const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 
 const moleTypes = [
-	{type: "mole10", points: 10, img: "/mole10.png", sound: "/mole20.mp3"},
+	{type: "mole10", points: 10, img: "/mole10.png", sound: "/mole10.mp3"},
 	{type: "mole20", points: 20, img: "/mole20.png", sound: "/mole20.mp3"},
 	{type: "bomb", points: -30, img: "/bomb.png", sound: "/bomb.mp3"},
 ];
@@ -22,6 +22,7 @@ const App = () => {
 	const [gameOver, setGameOver] = useState(false);
 	const [gameStarted, setGameStarted] = useState(false);
 	const [difficulty, setDifficulty] = useState("easy");
+	const [message, setMessage] = useState("");
 
 	const mole10SoundRef = useRef(null);
 	const mole20SoundRef = useRef(null);
@@ -32,7 +33,7 @@ const App = () => {
 		easy: 1000,
 		medium: 800,
 		hard: 500,
-		superHard: 300,
+		insane: 300,
 	};
 
 	useEffect(() => {
@@ -90,8 +91,17 @@ const App = () => {
 		setDifficulty(event.target.value);
 	};
 
+	const handleShare = () => {
+		navigator.clipboard.writeText(message);
+		setMessage(
+			`I scored ${score} points on ${difficulty} mode in Whack-a-Mole! Play Whack-a-Mole and see if you can score higher than me! Play here - https://whackamole.auvik.me/`
+		);
+		setTimeout(() => setMessage(""), 8000);
+	};
+
 	return (
 		<div className="App">
+			{message && <div className="message">{message}</div>}
 			<h1>Whack-a-Mole</h1>
 			<div className="stats">
 				<div className="scorecard">
@@ -109,12 +119,12 @@ const App = () => {
 					id="difficulty"
 					value={difficulty}
 					onChange={handleDifficultyChange}
-					disabled={gameStarted}
+					disabled={gameStarted && !gameOver}
 				>
 					<option value="easy">Easy</option>
 					<option value="medium">Medium</option>
 					<option value="hard">Hard</option>
-					<option value="superHard">Insane</option>
+					<option value="insane">Insane</option>
 				</select>
 			</div>
 			<div className="holes">
@@ -133,7 +143,10 @@ const App = () => {
 			) : gameOver ? (
 				<div>
 					<h2>Game Over! Final Score: {score}</h2>
-					<button onClick={handleStart}>Restart Game</button>
+					<div className="buttons">
+						<button onClick={handleStart}>Restart Game</button>
+						<button onClick={handleShare}>Share Score</button>
+					</div>
 				</div>
 			) : null}
 
