@@ -2,8 +2,42 @@
 	text-align: center;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
-	font-family: "Anton SC", sans-serif;
+	margin-top: 24px;
+	font-family: "Open Sans";
+}
+
+h1 {
+	font-family: "Anton SC";
+	font-size: 24px;
+	line-height: 32px;
+}
+
+h2 {
+	font-family: "Open Sans";
+	font-size: 16px;
+	line-height: 24px;
+}
+
+h3 {
+	font-family: "Open Sans";
+	font-size: 16px;
+	line-height: 32px;
+}
+
+p {
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
+	color: #718096;
 }
 
 .holes {
@@ -51,4 +85,90 @@ button {
 	text-align: center;
 	color: #ffffff;
 	margin-top: 24px;
+}
+
+select {
+	font-family: "Open Sans";
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 600;
+	box-sizing: border-box;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 2px 16px;
+	width: 150px;
+	margin-top: 8px;
+	color: #1a1a1a;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	transition: 500ms;
+	text-align: left;
+}
+
+select:focus {
+	outline: none !important;
+	border: 1px solid #dc5341;
+	transition: 500ms;
+}
+
+.stats {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 24px !important;
+	margin: auto;
+
+	font-family: "Open Sans";
+	font-size: 20px;
+	line-height: 32px;
+	font-weight: 500;
+	box-sizing: border-box;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 16px 16px;
+	width: 343px;
+}
+
+.countdown {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 0px;
+	gap: 2px;
+}
+
+.countdown p {
+	text-align: right;
+}
+
+.countdown h2 {
+	text-align: right;
+}
+
+.scorecard {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	text-align: left;
+	padding: 0px;
+	gap: 2px;
+}
+
+.selectlevels {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 8px !important;
+	margin: auto;
+
+	font-family: "Open Sans";
+	font-size: 14px;
+	line-height: 22px;
+	font-weight: 500;
+	box-sizing: border-box;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	padding: 8px 16px;
+	width: 343px;
 }
