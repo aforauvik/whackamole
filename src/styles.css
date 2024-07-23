@@ -71,12 +71,11 @@ p {
 }
 
 button {
-	padding: 16px 40px;
+	padding: 16px 80px;
 	cursor: pointer;
-	background: #dc5341;
+	background: #73bda8;
 	border-radius: 8px;
 	border: none;
-
 	font-family: "Open Sans";
 	font-style: normal;
 	font-weight: 600;
@@ -107,7 +106,7 @@ select {
 
 select:focus {
 	outline: none !important;
-	border: 1px solid #dc5341;
+	border: 1px solid #73bda8;
 	transition: 500ms;
 }
 
@@ -187,6 +186,6 @@ select:focus {
 }
 
 a {
-	color: #dc5341;
+	color: #73bda8;
 	text-decoration: none;
 }
