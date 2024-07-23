@@ -2,6 +2,9 @@ import "./styles.css";
 
 import React, {useState, useEffect, useRef} from "react";
 
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
 const moleTypes = [
 	{type: "mole10", points: 10, img: "/mole10.png", sound: "/mole20.mp3"},
 	{type: "mole20", points: 20, img: "/mole20.png", sound: "/mole20.mp3"},
@@ -138,6 +141,14 @@ const App = () => {
 			<audio ref={mole20SoundRef} src="/mole20.mp3" />
 			<audio ref={bombSoundRef} src="/bomb.mp3" />
 			<audio ref={gameOverSoundRef} src="/game-over.mp3" />
+
+			<p className="footer">
+				© {currentYear} | Developed By{" "}
+				<a target="blank" href="https://www.auvik.me/">
+					Auvik Mir
+				</a>
+				, North Carolina
+			</p>
 		</div>
 	);
 };

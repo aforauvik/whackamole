@@ -172,3 +172,21 @@ select:focus {
 	padding: 8px 16px;
 	width: 343px;
 }
+
+.footer {
+	margin-top: 16px;
+	display: flex;
+	justify-content: center;
+	font-family: "Open Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 18px;
+	text-align: left;
+	color: #718096;
+}
+
+a {
+	color: #dc5341;
+	text-decoration: none;
+}
