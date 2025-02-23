@@ -125,6 +125,11 @@ const App = () => {
 					<option value="insane">Insane</option>
 				</select>
 			</div>
+			{/* <div>
+				<img src="/mole10.png"></img>
+				<img src="/mole20.png"></img>
+				<img src="/bomb.png"></img>
+			</div> */}
 			<div className="holes">
 				{holes.map((hole, index) => (
 					<div
@@ -148,7 +153,7 @@ const App = () => {
 				</div>
 			) : null}
 
-			<audio ref={mole10SoundRef} src="/mole20.mp3" />
+			<audio ref={mole10SoundRef} src="/mole10.mp3" />
 			<audio ref={mole20SoundRef} src="/mole20.mp3" />
 			<audio ref={bombSoundRef} src="/bomb.mp3" />
 			<audio ref={gameOverSoundRef} src="/game-over.mp3" />
