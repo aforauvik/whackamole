@@ -100,7 +100,7 @@ const App = () => {
 	return (
 		<div className="App">
 			{message && <div className="message">{message}</div>}
-			<h1>Whack-a-Mole</h1>
+			<h1>Whack-a-UFO</h1>
 			<div className="stats">
 				<div className="scorecard">
 					<p>Score</p>
